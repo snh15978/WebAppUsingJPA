@@ -1,7 +1,4 @@
 buildscript {
-	dependencies {
-		classpath("gradle.plugin.com.ewerk.gradle.plugins:querydslplugin:1.0.10")
-	}
 }
 
 plugins {
