@@ -1,6 +1,6 @@
 package jpabook.jpashop.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -24,6 +24,8 @@ public class Member {
     @Embedded
     private Address address;
 
+
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @OneToMany(mappedBy = "member")
     private List<Order> Orders = new ArrayList<>();
 }
